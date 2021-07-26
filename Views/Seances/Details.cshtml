@@ -1,0 +1,42 @@
+﻿@model SeanceWebAppModel.Seance
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Seance</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IDSport)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDSport)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Jour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Jour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Horaire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Horaire)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Duree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Duree)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IDGymnase">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

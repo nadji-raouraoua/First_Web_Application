@@ -1,0 +1,45 @@
+﻿@model SeanceWebAppModel.Seance
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Seance</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IDSport)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDSport)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Jour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Jour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Horaire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Horaire)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Duree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Duree)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IDGymnase" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
